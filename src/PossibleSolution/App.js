@@ -106,13 +106,6 @@ class App extends Component {
         </header>
         <ul>
           <h2>Favorite Movies</h2>
-
-          {/*
-          For each object in the profiles array, make a list of JSX elements.
-          The map function returns a new array, which will
-          only have list elements in it. React will automatically know how to
-          render an array of JSX objects.
-          */}
           {profiles.map(profile => {
             const userName = users[profile.userID].name;
             const favMovieName = movies[profile.favoriteMovieID].name;

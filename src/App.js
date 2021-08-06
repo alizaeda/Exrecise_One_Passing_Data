@@ -104,7 +104,7 @@ class App extends Component {
         <ul>
       		{profiles.map(profile => {
             	return (
-             	 <li>{users[profile.id].name} favorite movie is {movies[profile.favoriteMovieID].name}.</li>
+             	 <li key={profile.userID}>{users[profile.id].name} favorite movie is {movies[profile.favoriteMovieID].name}.</li>
              )
             })}
       	</ul>
