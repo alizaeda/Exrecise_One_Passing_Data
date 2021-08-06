@@ -101,14 +101,18 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Ali Coding Practice</h1>
-        </header>
-        <h2>Favorite Movies</h2>
+        <ul>
+      		{profiles.map(profile => {
+            	return (
+             	 <li>{users[profile.id].name} favorite movie is {movies[profile.favoriteMovieID].name}.</li>
+             )
+            })}
+      	</ul>
       </div>
     );
   }
 }
+
+//${users.name} favorite movie is ${movies.name} ${profiles.favoriteMovieID}
 
 export default App;
